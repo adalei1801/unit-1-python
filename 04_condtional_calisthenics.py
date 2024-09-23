@@ -93,16 +93,21 @@ destination = input("Enter destination zone: ").upper()
 
 weight_cost_a = str(weight * 5)
 weight_cost_b = str(weight * 7)
+# Multiples the weight of the package depending on the zone
 
 if destination == "A":
     print("Your total is $" + weight_cost_a)
+    # If user chooses zone A the program prints the cost for zone A
 elif destination == "B":
     print("Your total cost is $" + weight_cost_b)
+    # If user chooses zone B the program prints the cost for zone B
 else:
     print("Total cannot be calculated due to destination error")
+    # If the user inputs another zone, an error message is printed
 
-if weight < 0:
+if weight <= 0:
     print("Error, package cannot be 0 kgs")
+    # If user inputs a number less than or equal to zero the program will return a error message
 
 '''
 Exercise 6:
@@ -113,9 +118,11 @@ Equilateral, Isosceles, Scalene, or Not a triangle.
 side_a = int(input("Enter side length a: "))
 side_b = int(input("Enter side length b: "))
 side_c = int(input("Enter side length c: "))
+# Asks user for three side lengths and converts them to integers
 
 if side_a == side_b and side_b == side_c:
     print("Your triangle is an equilateral")
+    # If all sides are equal the program prints
 elif side_a == side_b and side_b != side_c:
     print("Your triange is an isosceles")
 elif side_a != side_b and side_b != side_c:
