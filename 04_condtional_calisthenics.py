@@ -88,8 +88,9 @@ If the order weight is less than 0 kg, return an error message.
 '''
 
 weight = int(input("Enter package weight (in kg): "))
-# Asks for weight in lgs
+# Asks for weight in kgs and converts it into an integer
 destination = input("Enter destination zone: ").upper()
+# Asks for destination zone and makes the input uppercase
 
 weight_cost_a = str(weight * 5)
 weight_cost_b = str(weight * 7)
@@ -125,7 +126,10 @@ if side_a == side_b and side_b == side_c:
     # If all sides are equal the program prints
 elif side_a == side_b and side_b != side_c:
     print("Your triange is an isosceles")
+    # If the first two sides are equal but the third side is not the triangle is isosceles and the program returns that
 elif side_a != side_b and side_b != side_c:
     print("Your triange is a scalene")
+    # If none of the sides are equal then program prints the triangle is scalene
 else:
     print("This is not a triangle")
+    # If none of the above conditions are met then the shape is not a triangle and the program prints that
