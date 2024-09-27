@@ -28,7 +28,8 @@ while True:
         print(" ")
         print("Your current task(s) are: ")
         for x in task_list:
-            print(x)
+            item_index = task_list.index(x) + 1
+            print(item_index, ")", x)
              # Loop statement that orgainzes list items by line
         print(" ")
         ask_task = input("Would you like to add or remove one? ").lower()
@@ -44,13 +45,17 @@ while True:
             # asks user for new task and adds task to the list
         elif ask_task == "remove":
             # Elif statement for the user removing an item
+            print("Your tasks are:")
             for x in task_list:
-                print("Your tasks are: ")
-                print(x)
+                item_index = task_list.index(x) + 1
+                print(item_index,")", x)
                 # Loop statement that orgainzes list items by line
             remove_task = input("Which task would you like to remove? ").lower()
             # Prints task list and asks the user what they want removed and converts answer to lowercase
             print(" ")
+            if remove_task == item_index:
+                del task_list[item_index]
+
             task_list.remove(remove_task)
             # Removes task from list
             print("-------------------------------")
