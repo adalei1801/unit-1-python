@@ -1,4 +1,6 @@
-task_list = []
+with open("task_list.txt") as file:
+    task_list = file.readlines()
+    print(task_list)
 
 while True: 
     if task_list == []:
