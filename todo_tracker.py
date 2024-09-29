@@ -32,10 +32,11 @@ while True:
             print(item_index, ")", x)
              # Loop statement that orgainzes list items by line
         print(" ")
-        ask_task = input("Would you like to add or remove one? ").lower()
+        ask_task = input("Would you like to add, remove, or edit one? ").lower()
         # Asks user to add or remove a task and converts answer to lowercase
         print(" ")
         print("-------------------------------")
+
         if ask_task == "add":
             # If statement for the user adding a task
             print(" ")
@@ -50,16 +51,24 @@ while True:
                 item_index = task_list.index(x) + 1
                 print(item_index,")", x)
                 # Loop statement that orgainzes list items by line
+    
             remove_task = input("Which task would you like to remove? ").lower()
-            # Prints task list and asks the user what they want removed and converts answer to lowercase
+            # Prints task list and asks the user what they want removed and converts input into lowercase
             print(" ")
-            if remove_task == item_index:
-                del task_list[item_index]
-
             task_list.remove(remove_task)
-            # Removes task from list
+                # Removes task from list
             print("-------------------------------")
             print(" ")
+        elif ask_task == "edit":
+            edit_task = input("What task would you like to edit? ")
+            change_task = input("What do want it to be? ")
+            task_index = task_list.index(edit_task)
+            task_list[task_index] = change_task
+            print("Your tasks are:")
+            for x in task_list:
+                item_index = task_list.index(x) + 1
+                print(item_index, ")", x)
+            
         else:
             print("Sorry, I do not understand, please try again")
             # Else statement for incorrect input and allows user to try again
