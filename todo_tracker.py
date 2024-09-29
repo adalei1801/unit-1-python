@@ -52,22 +52,21 @@ while True:
                 print(item_index,")", x)
                 # Loop statement that orgainzes list items by line
     
-            remove_task = input("Which task would you like to remove? ").lower()
+            remove_task = int(input("Which task would you like to remove (by number)? "))
             # Prints task list and asks the user what they want removed and converts input into lowercase
             print(" ")
-            task_list.remove(remove_task)
+            del task_list[remove_task - 1]
                 # Removes task from list
             print("-------------------------------")
             print(" ")
         elif ask_task == "edit":
-            edit_task = input("What task would you like to edit? ")
-            change_task = input("What do want it to be? ")
-            task_index = task_list.index(edit_task)
-            task_list[task_index] = change_task
             print("Your tasks are:")
             for x in task_list:
                 item_index = task_list.index(x) + 1
                 print(item_index, ")", x)
+            edit_task = int(input("What task would you like to edit (by number)? "))
+            change_task = input("What do want to change it to? ")
+            task_list[edit_task - 1] = change_task
             
         else:
             print("Sorry, I do not understand, please try again")
