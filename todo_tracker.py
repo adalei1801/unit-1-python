@@ -74,6 +74,9 @@ while True:
             task_list[edit_task - 1] = change_task
             # Assigns the new task to the old task's index
 
+        elif ask_task == "clear":
+            task_list = []
+
         elif ask_task == "close":
             with open("task_list.txt", "w") as file:
                 file.writelines(task_list)
