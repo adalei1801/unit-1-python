@@ -5,6 +5,9 @@ parameter and prints a greeting message like "Hello, [name]!".
 """
 
 def greet(name, salutations= "Salutations"):
+    """
+    This function is meant to take a name and a greeting and print a statement that says hello.
+    """
     print(salutations + " " + name)
     # Function that prints a greeting using the above arguments
 
@@ -18,6 +21,9 @@ Write a function that takes an integer as an argument and returns its square.
 """
 
 def squared(number):
+    """
+    This function takes a number and returns its squared value
+    """
     return number**2
 # Function that squares a given number and returns that value
 
@@ -31,6 +37,9 @@ returns `True` if the number is even, and `False` otherwise.
 """
 
 def sorting(sort_num):
+    """
+    This function takes a number, determines whether or not its even or odd, returns a boolean value.
+    """
     # Function that determines whether a number is even or odd
     if sort_num % 2 == 0:
         return True
@@ -38,6 +47,7 @@ def sorting(sort_num):
     else:
         return False
     # If the number is odd, the program will return False
+
     
 sorted = sorting(5)
 # Runs funciton using 5 and assigns value to variable
@@ -48,6 +58,9 @@ Write a function that takes the length and width of a rectangle and returns its 
 """
 
 def area(length, width):
+    """
+    This function returns the area of a rectangle using the length and width as arguments.
+    """
     return length*width
 # Function that returns area of rectangle
 
@@ -62,8 +75,13 @@ the equivalent temperature in Fahrenheit using the correct formula
 """
 
 def cel_fah(cel):
+    """
+    This function converts Celsius to Fahrenheit and returns the value.
+    """
     return (cel * 9/5) + 32
 # Function that converts Celsius into Fahrenheit
+
+
 
 fah = cel_fah(84)
 # Calls function using 84 as function and assigns value to variable
@@ -74,7 +92,11 @@ Write a function that takes a list of numbers
 and returns the average (mean) of those numbers.
 """
 
+
 def average(select):
+    """
+    This function finds the area of numbers in a list.
+    """
     for x in select:
         # For loop that iterates through the numbers in a list
         sum = sum + x
@@ -82,6 +104,7 @@ def average(select):
     
     return sum / len(select)
     # Returns average of numbers in list
+
 
 listed_mean = average([2,5,7,6,3])
 # Executes function using list as argument and saves value to variable
@@ -94,6 +117,9 @@ Your function should also optionally accept a 3rd argument for discount, and ret
 """
 
 def shop_calc(price, quant, discount=0):
+    """
+    This function calculates the total of a purchase (even when there is a discount).
+    """
     total = quant * price
     # Function that calculates price of purchase
 
