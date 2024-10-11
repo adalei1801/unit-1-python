@@ -102,14 +102,17 @@ class BankAccount:
         self.owner = owner
         self.balance = balance
 
-    def deposit(self, amount=4):
+    def deposit(self, owner="Bob", amount=6):
+        self.balance = self.balance + amount
+        print(f"Hi {owner}! You deposited ${amount}. Your new balance is: ${self.balance}")
+
+
+    def withdraw(self, owner="Bob", amount=4):
         self.balance = self.balance - amount
+        print(f"Hi {owner}! You withdrew ${amount}. Your new balance is: ${self.balance}")
 
+transaction = BankAccount("Bob", 50)
 
-    def withdraw(self, amount=4):
-        self.balance = self.balance - amount
-
-person = BankAccount("Bob", 50)
-
-person.withdraw(3)
+transaction.deposit("Charlie", 14)
+transaction.withdraw()
 
